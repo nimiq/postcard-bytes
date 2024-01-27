@@ -4,6 +4,7 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
 pub mod accumulator;
+mod byte_array;
 mod de;
 
 mod eio;
@@ -60,6 +61,7 @@ pub mod experimental {
     pub use crate::ser::serialized_size;
 }
 
+pub use byte_array::FixedSizeByteArray;
 pub use de::deserializer::Deserializer;
 pub use de::flavors as de_flavors;
 pub use de::{from_bytes, from_bytes_cobs, take_from_bytes, take_from_bytes_cobs};
